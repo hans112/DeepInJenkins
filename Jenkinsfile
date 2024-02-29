@@ -4,6 +4,13 @@ pipeline {
  
     stages {
 
+
+ parameters {
+   
+    	string(name:'BranchName',
+      	defaultValue: 'master!',
+      	description: 'enter your branch name')
+  }
         stage('build th app'){ 
             steps {
             sh 'mvn clean '
